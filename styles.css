@@ -53,16 +53,6 @@ nav .button{
     border-radius: 60px;
 }
 
-.hero{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
-    background: url('') no-repeat center center/cover;
-    color: #191717;
-    min-height: 4vh;
-}
-
 .logo-container {
     display: flex;
     align-items: center;
@@ -103,13 +93,14 @@ nav .button{
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
-    background: url('/car-exterior.jpeg') no-repeat center center/cover;
+    background: url('images/exterior-machine.webp') no-repeat center center/cover;
     color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
 }
 .hero-content {
     position: relative;
@@ -127,7 +118,7 @@ nav .button{
     z-index: 1;
 }
 .hero h1 {
-    font-size: 12em;
+    font-size: 10em;
     margin: 10px 0;
 }
 .hero p {
