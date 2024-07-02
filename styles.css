@@ -3,7 +3,19 @@
 @property --main-background-color{
     syntax: "<color>";
     inherits: false;
-    initial-value: rgb(48, 47, 47);
+    initial-value: rgb(214, 214, 214);
+}
+
+@property --nav-background-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(54, 53, 53);
+}
+
+@property --button-background-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(93, 92, 92);
 }
 
 @property --button-border-color{
@@ -28,13 +40,13 @@ body, html{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    color: var(--main-background-color);
+    background-color: var(--main-background-color);
     line-height: 1.6;
     height: 100%;
 }
 
 header{
-    background: var(--main-background-color);
+    background: var(--nav-background-color);
     color: #fff;
     padding: 1rem 0;
 }
@@ -72,7 +84,7 @@ nav ul li a {
 }
 
 nav .btn{
-    background: var(--main-background-color);
+    background: var(--button-background-color);
     color: #ffffff;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -157,7 +169,7 @@ nav .btn{
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
-    background-color: var(--main-background-color);
+    background-color: var(--button-background-color);
     border: 2px solid var(--button-border-color);
     color: #fff;
     text-decoration: none;
@@ -170,7 +182,7 @@ nav .btn{
 
 /* About Us */
 .appointment-btn{
-    background-color: var(--main-background-color);
+    background-color: var(--button-background-color);
     border: 2px solid var(--button-border-color);
     border-radius: var(--border-radius);
     font-size: 20px;
@@ -200,7 +212,7 @@ nav .btn{
 
   #about{
     padding: 5em;
-    height: 80%;
+    height: 100vh;
   }
 
   .get-to-know{
@@ -211,15 +223,15 @@ nav .btn{
 
   /* Services */
   #service{
-    padding: 5em;
-    height: 100%;
+    padding: 5em 1em;
+    height: 100vh;
   }
 
   .col-m-4{
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* Three columns with equal width*/
     gap: 70px; /* Gap between grid items */
-    padding: 20px;
+    padding: 30px;
   }
   .service-header{
     text-align: center;
@@ -230,7 +242,7 @@ nav .btn{
 
   .service-box{
     border: 2px solid var(--button-border-color);
-    background-color: var(--main-background-color);
+    background-color: var(--button-background-color);
     padding: 30px;
     text-align: center;
     color: #ffffff;
