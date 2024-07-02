@@ -1,14 +1,40 @@
+/* CSS Variables : Custom Variables */
+
+@property --main-background-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(48, 47, 47);
+}
+
+@property --button-border-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(191, 137, 11);
+}
+
+@property --logo-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(191,137,11);
+}
+
+
+:root{
+    --border-radius: 10px;
+}
+
+
 body, html{
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--main-background-color);
     line-height: 1.6;
     height: 100%;
 }
 
 header{
-    background: #33024b;
+    background: var(--main-background-color);
     color: #fff;
     padding: 1rem 0;
 }
@@ -45,12 +71,15 @@ nav ul li a {
     padding: 0.5rem 1rem;
 }
 
-nav .button{
-    background: #ffffff;
-    color: #080808;
+nav .btn{
+    background: var(--main-background-color);
+    color: #ffffff;
     padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 60px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--button-border-color);
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .logo-container {
@@ -58,12 +87,11 @@ nav .button{
     align-items: center;
     color: white;
     padding: 10px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius)
 }
 
 .logo-icon svg {
-    fill: #6c3d74; /* Accent color for the icon */
+    fill: var(--logo-color); /* Accent color for the icon */
     margin-right: 10px;
 }
 
@@ -129,10 +157,11 @@ nav .button{
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
-    color: #333;
-    background-color: gold;
+    background-color: var(--main-background-color);
+    border: 2px solid var(--button-border-color);
+    color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     margin-top: 20px;
 }
 .cta-button:hover {
@@ -140,9 +169,26 @@ nav .button{
 }
 
 /* About Us */
-.column{
-    float: left;
-    width: 50%;
+.appointment-btn{
+    background-color: var(--main-background-color);
+    border: 2px solid var(--button-border-color);
+    border-radius: var(--border-radius);
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.col-sm-8 p{
+    margin-bottom: 40px;
+    font-size: large;
+}
+
+.col-sm-8 button{
+    display: block;
+    margin: 0 auto;
 }
 
 /* Clear floats after the columns */
@@ -154,8 +200,39 @@ nav .button{
 
   #about{
     padding: 5em;
+    height: 80%;
   }
 
   .get-to-know{
     text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  /* Services */
+  #service{
+    padding: 5em;
+    height: 100%;
+  }
+
+  .col-m-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three columns with equal width*/
+    gap: 70px; /* Gap between grid items */
+    padding: 20px;
+  }
+  .service-header{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 36px;
+    padding: .5rem 1rem;
+  }
+
+  .service-box{
+    border: 2px solid var(--button-border-color);
+    background-color: var(--main-background-color);
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: var(--border-radius);
   }
