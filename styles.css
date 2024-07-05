@@ -35,6 +35,12 @@
     --border-radius: 10px;
 }
 
+/* General */
+section{
+    padding: 1em;
+    background-color: var(--main-background-color);
+    border: 1px solid #f00606;
+}
 
 body, html{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -212,7 +218,6 @@ nav .btn{
 
   #about{
     padding: 5em;
-    height: 100vh;
   }
 
   .get-to-know{
