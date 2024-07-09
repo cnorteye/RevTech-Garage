@@ -1,12 +1,14 @@
 {
-	"folders": [
-		{
-			"path": "."
-		},
-		{
-			"name": "RevTech-Garage",
-			"path": "RevTech-Garage"
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "name": "RevTech-Garage",
+      "path": "RevTech-Garage"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "RevTech-Garage"
+  }
 }
