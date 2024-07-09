@@ -3,7 +3,7 @@
 @property --main-background-color{
     syntax: "<color>";
     inherits: false;
-    initial-value: rgb(214, 214, 214);
+    initial-value: rgb(239, 238, 238);
 }
 
 @property --nav-background-color{
@@ -32,7 +32,7 @@
 
 
 :root{
-    --border-radius: 10px;
+    --border-radius: 10px; /* rounded corners */
 }
 
 body, html{
@@ -50,6 +50,8 @@ header{
     padding: 1rem 0;
 }
 
+/* Navigation Bar */ 
+
 .navbar{
     background-color: var(--nav-background-color);
     color: white;
@@ -62,6 +64,7 @@ header{
     list-style-type: none;
     font-weight: bold;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li a {
@@ -69,15 +72,19 @@ nav ul li a {
     padding: 0.5rem 1rem;
 }
 
-nav .btn{
-    background: var(--button-background-color);
-    color: #ffffff;
-    padding: 0.5rem 1rem;
+.sign-up-btn{
+    background-color: var(--button-background-color);
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: var(--border-radius);
-    border: 2px solid var(--button-border-color);
     font-size: 16px;
     cursor: pointer;
+    border: 2px solid var(--button-border-color);
+}
+
+.sign-up-btn:hover{
+    background-color: var(--logo-color);
 }
 
 .logo-container {
@@ -99,19 +106,19 @@ nav .btn{
     letter-spacing: 1px;
 }
 
-.sematic-button{
-    background-color: #ffffff;
-    color: black;
+.login-btn{
+    background-color: var(--button-background-color);
+    color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--button-border-color);
     font-size: 16px;
     cursor: pointer;
-    transition: backgroud-color 0.3s ease;
 }
 
-.sematic-button:hover{
-    background-color: #0056b3;
+.login-btn:hover{
+    background-color: var(--logo-color);
 }
 
 /* home styles */
