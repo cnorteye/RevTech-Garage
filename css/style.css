@@ -1,0 +1,8 @@
+:root{
+    --orange-color: #DC883E;
+    --background-col: #242122;
+}
+
+body{
+    background-color: var(--background-col);
+}
