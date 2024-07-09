@@ -1,0 +1,79 @@
+/* Navigation Bar */ 
+
+.navbar{
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    overflow: hidden;
+    background-color: var(--nav-background-color);
+    color: white;
+    padding: 1em;
+    z-index: 1000; /*Ensure it's above other content */
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #ffff;
+    padding: 0.5rem 1rem;
+}
+
+.sign-up-btn{
+    background-color: var(--button-background-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    border: 2px solid var(--button-border-color);
+}
+
+.sign-up-btn:hover{
+    background-color: var(--logo-color);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--border-radius)
+}
+
+.logo-icon svg {
+    fill: var(--logo-color); /* Accent color for the icon */
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.login-btn{
+    background-color: var(--button-background-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--button-border-color);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn:hover{
+    background-color: var(--logo-color);
+}

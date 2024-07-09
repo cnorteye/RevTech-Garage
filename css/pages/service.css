@@ -1,0 +1,27 @@
+ /* SERVICES */
+ #service{
+    padding: 5em 1em;
+    height: 100vh;
+  }
+
+  .col-m-4{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Three columns with equal width*/
+    gap: 70px; /* Gap between grid items */
+    padding: 30px;
+  }
+  .service-header{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 36px;
+    padding: .5rem 1rem;
+  }
+
+  .service-box{
+    border: 2px solid var(--button-border-color);
+    background-color: var(--button-background-color);
+    padding: 30px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: var(--border-radius);
+  }

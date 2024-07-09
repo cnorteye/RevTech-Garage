@@ -1,0 +1,161 @@
+/* This file contains the global styles, CSS variables, and any styles that are shared across all pages */
+/* CSS Variables : Custom Variables */
+
+@property --main-background-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(239, 238, 238);
+}
+
+@property --nav-background-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(54, 53, 53);
+}
+
+@property --button-background-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(93, 92, 92);
+}
+
+@property --button-border-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(191, 137, 11);
+}
+
+@property --logo-color{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: rgb(191,137,11);
+}
+
+/* responsive based on screen size */
+@media (max-width: 600px) {
+    .navbar {
+        font-size: 0.8em;
+    }
+    .service-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+:root{
+    --border-radius: 10px; /* rounded corners */
+}
+
+body, html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--main-background-color);
+    line-height: 1.6;
+    height: 100%;
+}
+
+/* Header */ 
+header{
+    background: #f2f2f2;
+    color: #fff;
+    padding: 1rem 0;
+    
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.container {
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+    .col-m-4 {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for larger tablets and small desktops */
+    }
+  
+    .hero h1 {
+      font-size: 7em;
+    }
+  
+    .hero p {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .col-m-4 {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+  
+    .hero h1 {
+      font-size: 5em;
+    }
+  
+    .hero p {
+      font-size: 1.5em;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cta-button {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col-m-4 {
+      grid-template-columns: 1fr; /* One column for mobile devices */
+    }
+  
+    .hero h1 {
+      font-size: 3em;
+    }
+  
+    .hero p {
+      font-size: 1em;
+    }
+  
+    .cta-button {
+      font-size: 0.8em;
+    }
+  
+    .header-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .header-info p {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 600px)
+  {
+    .review-container{
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  /* General */
+  section {
+    padding: 1em;
+    background-color: var(--main-background-color);
+  }

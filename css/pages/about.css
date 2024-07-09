@@ -1,0 +1,39 @@
+/* ABOUT US */
+.appointment-btn{
+    background-color: var(--button-background-color);
+    border: 2px solid var(--button-border-color);
+    border-radius: var(--border-radius);
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+
+.col-sm-8 p{
+    margin-bottom: 40px;
+    font-size: large;
+}
+
+.col-sm-8 button{
+    display: block;
+    margin: 0 auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #about{
+    padding: 5em;
+  }
+
+  .get-to-know{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
