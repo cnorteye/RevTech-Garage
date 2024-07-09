@@ -30,6 +30,15 @@
     initial-value: rgb(191,137,11);
 }
 
+/* responsive based on screen size */
+@media (max-width: 600px) {
+    .navbar {
+        font-size: 0.8em;
+    }
+    .service-box {
+        grid-template-columns: 1fr;
+    }
+}
 
 :root{
     --border-radius: 10px; /* rounded corners */
@@ -45,17 +54,40 @@ body, html{
 }
 
 header{
-    background: var(--nav-background-color);
+    background: #f2f2f2;
     color: #fff;
     padding: 1rem 0;
+    
 }
 
 /* Navigation Bar */ 
+.header-info{
+    background-color: whitesmoke;
+    color: black;
+    padding: 10px;
+    text-align: end;
+}
+/* Header Info Bar */
+.header-info ul{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;  /* Adds space between flex items */
+    padding: 10px;
+}
+
+.header-info p {
+    margin: 0;
+}
 
 .navbar{
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick to the top of the viewport */
+    overflow: hidden;
     background-color: var(--nav-background-color);
     color: white;
     padding: 1em;
+    z-index: 1000; /*Ensure it's above other content */
 }
 
 .nav-links{
@@ -68,6 +100,10 @@ header{
 }
 
 nav ul li a {
+    float: left;
+    display: block;
+    text-align: center;
+    text-decoration: none;
     color: #ffff;
     padding: 0.5rem 1rem;
 }
@@ -121,7 +157,7 @@ nav ul li a {
     background-color: var(--logo-color);
 }
 
-/* home styles */
+/* HOME PAGE */
 .hero {
     position: relative;
     width: 100%;
@@ -172,6 +208,48 @@ nav ul li a {
 .cta-button:hover {
     background-color: goldenrod;
 }
+
+.featured-services div{
+    margin-bottom: 10px;
+}
+
+/* Customer Reviews */
+#customer-reviews{
+    padding: 2em;
+    background-color: #fff;
+}
+
+#customer-reviews h2{
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+.review-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+    padding: 1em;
+}
+
+.review{
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review p{
+    font-style: italic;
+    color: #555;
+}
+
+.review h4{
+    margin-top: 10px;
+    color: #333;
+}
+
 
 /* About Us */
 .appointment-btn{
@@ -241,9 +319,86 @@ nav ul li a {
     border-radius: var(--border-radius);
   }
 
+/* Responsive design */
+@media (max-width: 1200px) {
+    .col-m-4 {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for larger tablets and small desktops */
+    }
+  
+    .hero h1 {
+      font-size: 7em;
+    }
+  
+    .hero p {
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .col-m-4 {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+    }
+  
+    .hero h1 {
+      font-size: 5em;
+    }
+  
+    .hero p {
+      font-size: 1.5em;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .cta-button {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .col-m-4 {
+      grid-template-columns: 1fr; /* One column for mobile devices */
+    }
+  
+    .hero h1 {
+      font-size: 3em;
+    }
+  
+    .hero p {
+      font-size: 1em;
+    }
+  
+    .cta-button {
+      font-size: 0.8em;
+    }
+  
+    .header-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .header-info p {
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 600px)
+  {
+    .review-container{
+        grid-template-columns: 1fr;
+    }
+  }
+  
   /* General */
-section{
+  section {
     padding: 1em;
     background-color: var(--main-background-color);
-    border: 1px solid #f00606;
-}
+  }
