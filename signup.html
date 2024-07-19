@@ -17,6 +17,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="css/signin.css">
+        <link rel="stylesheet" href="css/signup.css">
 
     </head>
     <body>
@@ -49,20 +50,30 @@
         </header>
     <div class="container">
         <form class="form">
-            <h2>Login</h2>
+            <h2>Sign up</h2>
             <div class="form-control">
-                <label for="username">Username:</label>
+                <label for="first-name">First Name:</label>
+                <input type="name" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-control">
+                <label for="last-name">Last Name:</label>
+                <input type="name" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-control">
+                <label for="username">Email id:</label>
                 <input type="text" id="username" name="username" required>
             </div>
             <div class="form-control">
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Log in</button>
+            <div class="form-control">
+                <label for="password">Verify Password:</label>
+                <input type="password" id="verify-password" name="password" required>
+            </div>
+
+            <button type="submit">Sign up</button>
         </form>
-        <div class="register">
-            <p>Don't have an account? <a href="#">Register here</a></p>
-        </div>
     </div>
 </body>
 </html>
