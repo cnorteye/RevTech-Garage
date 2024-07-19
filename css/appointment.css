@@ -1,0 +1,78 @@
+/* appointment.css */
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center; /* Center aligns .form-box */
+}
+
+.form-box {
+    width: 100%; /* Adjust width as needed */
+    max-width: 550px; /* Limit width if necessary */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center aligns form elements */
+}
+
+.form-control {
+    margin-bottom: 40px;
+    border: none;
+    box-shadow: none;
+    width: 100%; /* Adjust width as needed */
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-control input,
+.form-control select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 170px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.register {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.register p {
+    font-size: 0.9rem;
+}
+
+.register a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register a:hover {
+    text-decoration: underline;
+}
