@@ -1,178 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navbar</title>
     <style>
-        nav {
+      :root {
+        --orange-color: #dc883e;
+        --background-col: #242122;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: var(--background-col);
+      }
+
+      /* nav {
             position: fixed;
             top: 0;
             width: 100%;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
             min-height: 9vh;
             background-color: rgba(0, 0, 0, 0.8);
-            font-family: "Poppins", sans-serif;
             z-index: 3;
-        }
+        } */
 
-        .logotitle img {
-            width: 90px;
-            margin-top: 13px;
-        }
+      .container {
+        font-size: 1.2rem;
+        font-family: "Merriweather Sans", sans-serif;
+        height: 70px;
+      }
 
-        .nav-links {
+      .navbar {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.8);
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 140px;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .navbar ul {
+        padding-left: 30px;
+        display: flex;
+      }
+
+      .container .navbar {
+        justify-content: space-between;
+      }
+      .navbar ul li {
+        list-style-type: none;
+        align-self: center;
+      }
+
+      .container .navbar ul li {
+        padding: 10px;
+        margin: 0 10px;
+      }
+
+      .navbar a {
+        color: var(--nav-text);
+        font-weight: bold;
+      }
+
+      .navbar a:hover {
+        color: var(--secondary-color);
+      }
+      .logotitle img {
+        width: 90px;
+        margin-top: 13px;
+      }
+
+      /* .nav-links {
             display: flex;
             justify-content: space-around;
-            width: 40%;
-        }
-
-        .nav-links li {
             list-style: none;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+        } */
+
+      .nav-links li {
+        position: relative;
+      }
+
+      .nav-links a {
+        display: block;
+        color: #b9b9b9;
+        text-decoration: none;
+        letter-spacing: 1.5px;
+        font-weight: bold;
+        font-size: 17px;
+        padding: 15px 20px; /* Adjust padding for touch targets */
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: white;
+      }
+
+      .nav-btn {
+        color: white;
+        text-decoration: none;
+        border: 2px solid var(--orange-color);
+        border-radius: 7px;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: background-color 0.3s, border-color 0.3s;
+      }
+
+      .nav-btn:hover {
+        background-color: var(--orange-color);
+      }
+
+      .burger {
+        display: none;
+        cursor: pointer;
+      }
+
+      .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: rgb(226, 226, 226);
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+
+      @media screen and (max-width: 908px) {
+        .nav-links {
+          position: fixed;
+          right: 0;
+          top: 9vh; /* Adjust according to your navbar height */
+          height: 91vh; /* Adjust for full height menu */
+          width: 50%; /* Adjust width as needed */
+          background-color: rgba(0, 0, 0, 0.8);
+          flex-direction: column;
+          transform: translateX(100%);
+          transition: transform 0.5s ease-in-out;
+          z-index: 2;
         }
 
-        .nav-links a:hover {
-            color: white;
-            border-bottom: 1px solid whitesmoke;
-        }
-
-        .nav-links a {
-            color: #b9b9b9;
-            text-decoration: none;
-            letter-spacing: 1.5px;
-            font-weight: bold;
-            font-size: 17px;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.5s;
+        .nav-links.open {
+          transform: translateX(0%);
+          
         }
 
         .burger {
-            display: none;
+          display: block;
+        }
+      }
+
+      @keyframes navLinkFade {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
         }
 
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: rgb(226, 226, 226);
-            margin: 5px;
-            transition: all 0.3s ease;
+        to {
+          opacity: 1;
+          transform: translateX(0);
         }
+      }
 
-        @media screen and (max-width: 1024px) {
-            .nav-links {
-                width: 60%;
-            }
-        }
+      .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
 
-        @media screen and (max-width: 768px) {
-            body {
-                overflow-x: hidden;
-                background-attachment: cover;
-            }
+      .toggle .line2 {
+        opacity: 0;
+      }
 
-            .nav-links {
-                margin-top: 16px;
-                position: fixed;
-                overflow: hidden;
-                right: 0px;
-                height: 93vh;
-                top: 7vh;
-                background-color: rgba(0, 0, 0, 0.8);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 50%;
-                transform: translateX(100%);
-                transition: transform 0.5s ease-in;
-            }
-
-            .nav-links li {
-                opacity: 0;
-            }
-
-            .burger {
-                display: block;
-                cursor: pointer;
-            }
-        }
-
-        .nav-active {
-            transform: translateX(0%);
-        }
-
-        @keyframes navLinkFade {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        .toggle .line1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .toggle .line2 {
-            opacity: 0;
-        }
-
-        .toggle .line3 {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
+      .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="logotitle">
-            <a href="index"><img src="images/Logo.png" alt="Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="About">About</a></li>
-            <li><a href="Services">Services</a></li>
-            <li><a href="Contacts">Contact Us</a></li>
-        </ul>
-        <div class="burger">
+      <div class="container">
+        <div class="navbar">
+          <div class="logotitle">
+            <a href="index.html"><img src="images/Logo.png" alt="Logo" /></a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="about/about.html">About</a></li>
+            <li><a href="services/service.html">Services</a></li>
+            <li><a href="contact/contact.html">Contact</a></li>
+            <li><a href="signin.html" class="nav-btn">Login</a></li>
+            <li><a href="#signup" class="nav-btn">Sign up</a></li>
+          </ul>
+          <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
+          </div>
         </div>
+      </div>
     </nav>
-    <div class="content">
-    </div>
-</body>
-<script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.nav-links');
-            const navLinks = document.querySelectorAll('.nav-links li');
+    <div class="content"></div>
 
-            // Check if burger button exists
-            if (burger) {
-                burger.addEventListener('click', () => {
-                    console.log('Clicked!!');
-                    nav.classList.toggle('nav-active');
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const burger = document.querySelector(".burger");
+        const nav = document.querySelector(".nav-links");
+        const navLinks = document.querySelectorAll(".nav-links li");
 
-                    // Animate Links
-                    navLinks.forEach((link, index) => {
-                        if (link.style.animation) {
-                            link.style.animation = '';
-                        } else {
-                            link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                        }
-                    });
+        if (burger) {
+          burger.addEventListener("click", () => {
+            nav.classList.toggle("open");
 
-                    // Burger Animation
-                    burger.classList.toggle('toggle');
-                });
-            } else {
-                console.error('Burger button not found');
-            }
-        });
-</script>
+            navLinks.forEach((link, index) => {
+              if (link.style.animation) {
+                link.style.animation = "";
+              } else {
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+              }
+            });
+
+            burger.classList.toggle("toggle");
+          });
+        } else {
+          console.error("Burger button not found");
+        }
+      });
+    </script>
+  </body>
 </html>

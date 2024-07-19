@@ -29,6 +29,11 @@ nav ul li a {
     padding: 0.5rem 1rem;
 }
 
+nav ul li a:hover{
+    text-decoration: none;
+    color: var(--logo-color);
+}
+
 .sign-up-btn{
     background-color: var(--button-background-color);
     color: white;
@@ -42,6 +47,8 @@ nav ul li a {
 
 .sign-up-btn:hover{
     background-color: var(--logo-color);
+    text-decoration: none;
+    color: black;
 }
 
 .logo-container {
@@ -76,4 +83,5 @@ nav ul li a {
 
 .login-btn:hover{
     background-color: var(--logo-color);
+    text-decoration: none;
 }
