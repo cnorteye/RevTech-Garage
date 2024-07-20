@@ -1,0 +1,87 @@
+html, body {
+    height: 100%; /* Essential for filling the full height of the viewport */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, content, footer */
+    min-height: 100vh; /* Full viewport height */
+}
+
+main {
+    display: block; /* Ensures the main content is flexible */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-top {
+    font-size: 16px;
+    margin-bottom: 10px; /* Spacing between copyright and links */
+}
+
+.footer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-links, .footer-legal, .footer-subscription, .footer-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 10px; /* Margin for spacing */
+}
+
+.footer-links a, .footer-legal a, .footer-social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    background-color: #fff;  /* White background to help icons stand out */
+    border-radius: 50%;  /* Makes images circular */
+    padding: 5px;  /* Padding to prevent images from touching the edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);  /* Adds shadow for depth */
+    border: 2px solid #fff;  /* Optional: adds a white border for more contrast */
+    transition: transform 0.3s ease-in-out;  /* Smooth transition for hover effects */
+}
+
+.footer-social a:hover img {
+    transform: scale(1.1);  /* Slightly enlarges the image on hover */
+    cursor: pointer;  /* Changes the cursor to indicate clickable */
+}
+
+.footer-social {
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-links, .footer-legal, .footer-subscription, .footer-social {
+        flex-direction: column;
+    }
+}
+
+
