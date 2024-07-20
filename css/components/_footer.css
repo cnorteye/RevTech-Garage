@@ -37,6 +37,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    
 }
 
 .footer-links, .footer-legal, .footer-subscription, .footer-social {
@@ -44,6 +45,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 5px 10px; /* Margin for spacing */
+    color: #333;
 }
 
 .footer-links a, .footer-legal a, .footer-social a {
