@@ -1,5 +1,8 @@
 /* ABOUT US */
-.appointment-btn{
+body{
+  background-color: #fff;
+}
+ .appointment-btn{
     background-color: var(--button-background-color);
     border: 2px solid var(--button-border-color);
     border-radius: var(--border-radius);
@@ -19,10 +22,10 @@
 .col-sm-8 button{
     display: block;
     margin: 0 auto;
-}
+} */
 
 /* Clear floats after the columns */
-.row:after {
+ .row:after {
     content: "";
     display: table;
     clear: both;
@@ -36,4 +39,4 @@
     text-align: center;
     font-size: 36px;
     margin-bottom: 20px;
-  }
+  } 

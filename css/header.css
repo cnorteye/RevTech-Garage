@@ -1,17 +1,17 @@
-.header-info{
+/* .header-info{
     background-color: whitesmoke;
     color: black;
     padding: 10px;
     text-align: end;
 }
-/* Header Info Bar */
+
 .header-info ul{
     display: flex;
     justify-content: flex-end;
-    gap: 20px;  /* Adds space between flex items */
+    gap: 20px;  
     padding: 10px;
 }
 
 .header-info p {
     margin: 0;
-}
+} */
