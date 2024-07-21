@@ -1,9 +1,13 @@
-/* .header-info{
-    background-color: whitesmoke;
-    color: black;
+.header-info{
+    background-color: var(--secondary-color);
+    color: white;
     padding: 10px;
     text-align: end;
+    display: flex;
+    align-items: center;
+
 }
+
 
 .header-info ul{
     display: flex;
@@ -14,4 +18,9 @@
 
 .header-info p {
     margin: 0;
-} */
+}
+
+.logotitle img {
+    width: 90px;
+    margin-top: 13px;
+  }

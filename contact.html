@@ -3,33 +3,39 @@
     <head>
         <meta charset="UTF-8">
         <meta name="decription" content="Website on a fictional Mobile detailing compnay">
-        <meta name="author" content="Comfort Sinyangwe">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>RevTech Garage</title>
         
         <link rel="stylesheet" href="css/footer.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/header.css">
+        
 
     </head>
     <body>
+         <div id="header"></div>
+        
         <section id="contact" class="container-fluid">
-            <h2>Contact Us</h2>
-            <p>If you have any questions, feel free to reach out to us.</p>
-            <form>
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" class="form-control" placeholder="Your Name">
+            <form class="form" action="/contact.html" method="POST">
+                <div class="from__title"> Contact Us</div>
+                <p class="form__description">If you have any questions, feel free to reach out to us.</p>
+                <div class="form__item">
+                    <label class="form__label" for="name">Name:</label>
+                    <input class="form__input" type="text" id="name" class="form-control" placeholder="Your Name">
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" class="form-control" placeholder="Your Email">
+                <div class="form__item">
+                    <label class="form__label" for="email">Email:</label>
+                    <input class="form__input" type="email" id="email" class="form-control" placeholder="Your Email">
                 </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
+                <div class="form__item">
+                    <label class="form__label" for="message">Message:</label>
+                    <textarea class="form__input" id="message" class="form-control" rows="5" placeholder="Your Message"></textarea>
                 </div>
-                <button type="submit" class="btn appointment-btn">Submit</button>
+                <div class="form__item">
+                    <button type="submit" class="form__btn">Submit</button>
+                </div>
+                
             </form>
         </section>
     
@@ -38,7 +44,4 @@
         <script src="js/loadFragments.js"></script>
         
     </body>
-
-    
-
 </html>
