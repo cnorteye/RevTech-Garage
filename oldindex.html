@@ -23,8 +23,41 @@
 
     </head>
     <body>
-        <div id="header"></div>
-        <div id="nav"></div>
+        <header> 
+            <!-- Header Info -->
+             <div class="header-info">
+                <ul>
+                    <p>  Location: City, State, Country </p>
+                    <p>  Email: contact@revtech.com </p>
+                    <p>  Phone +1 123-456-7890 </p>
+                </ul>
+             </div>
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="logo-container">
+                        <div class="logo-icon">
+                          <!-- SVG icon for a car or any automotive-related symbol -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="50px" height="50px">
+                                <path d="M5 16c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm14 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zM18.92 5.01C18.71 4.42 18.14 4 17.5 4H6.5c-.64 0-1.21.42-1.42 1.01L3 11v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 6h11l1.16 3H5.34L6.5 6zm11.5 11H6v-5h12v5z"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            RevTech Garage
+                        </div>  
+                    </div>
+                    <ul class="nav-links">
+                            <li><a  href="index.html">Home</a></li>
+                            <li><a  href="about/about.html">About</a></li>
+                            <li><a  href="services/service.html">Services</a></li>
+                            <li><a  href="contact/contact.html">Contact</a></li>
+                            <li><a  href="loyalty/loyalty.html">Loyalty Offers</a></li>        
+                    </ul>
+                    <!-- made path changes to absolute to correctly naviagate to the login and signin pages -->
+                    <a href="./signin.html" class="login-btn">Login</a>
+                    <a href="./signup.html" class="sign-up-btn"> Sign up</a>
+                </div>
+            </nav>
+        </header>
 
         <section class="hero"">
             <div class="hero-content">
@@ -96,9 +129,29 @@
         </section>
     
 
-        <div id="footer"></div>
+        <footer>
+            <p class="footer-top">&copy; 2024 RevTech Auto Repair. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about/about.html">About Us</a>
+                <a href="./services/service.html">Services</a>
+                <a href="./contact/contact.html">Contact</a>
+            </div>
+            <div class="footer-legal">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </div>
+            <div class="footer-subscription">
+                <input type="email" placeholder="Subscribe to our newsletter">
+                <button type="submit">Subscribe</button>
+            </div>
+            <div class="footer-social">
+                <a href="https://facebook.com"><img src="images/facebook-icon.jpeg" alt="Facebook"></a>
+                <a href="https://twitter.com"><img src="images/x-icon.png" alt="Twitter"></a>
+                <a href="https://instagram.com"><img src="images/instagram-icon.jpeg" alt="Instagram"></a>
+            </div>
+        </footer>
        
-        <script src="js/loadFragments.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
     </body>
 
   
