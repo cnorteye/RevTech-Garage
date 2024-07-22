@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".nav-links");
     const navLinks = document.querySelectorAll(".nav-links li");
 
+
     if (burger) {
       burger.addEventListener("click", () => {
         nav.classList.toggle("open");

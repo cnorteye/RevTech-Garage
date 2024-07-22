@@ -1,4 +1,8 @@
  /* SERVICES */
+
+ h2{
+  color: white;
+ }
   #services{
     padding: 5em 1em;
     height: 100vh;

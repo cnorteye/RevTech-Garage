@@ -1,8 +1,19 @@
-.container {
-    height: 100vh;
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+}
+
+.signin-container {
+    height: auto;
     background-color: #fff;
-    padding: 20px;
     border-radius: 8px;
+    width: auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin-top: 20px; /* Adjust margin as needed */
 }
 
 .form {
@@ -11,14 +22,15 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
+    padding: 40px;
 }
 
 .form h2 {
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 .form-control {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border: none;
     box-shadow: none;
 }
@@ -30,7 +42,7 @@
 
 .form-control input {
     width: 100%;
-    padding: 8px;
+    min-width: 300px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -40,15 +52,25 @@ button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 0px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 4px;
-    width: 60px;
+    width: auto;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1rem;
+    padding: 15px 15px;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+.messageDiv{
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    animation: fadeOut 7s forwards;
 }

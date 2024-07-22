@@ -7,6 +7,7 @@
         <title>RevTech Garage</title>
         
         <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="css/navbar.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/contact.css">
         <link rel="stylesheet" href="css/header.css">
@@ -14,11 +15,12 @@
 
     </head>
     <body>
-         <div id="header"></div>
-        
+         <!-- <div id="header"></div> -->
+        <div id="nav"></div>
+        <main>
         <section id="contact" class="container-fluid">
             <form class="form" action="/contact.html" method="POST">
-                <div class="from__title"> Contact Us</div>
+                <div class="form__title">Contact Us</div>
                 <p class="form__description">If you have any questions, feel free to reach out to us.</p>
                 <div class="form__item">
                     <label class="form__label" for="name">Name:</label>
@@ -38,10 +40,11 @@
                 
             </form>
         </section>
-    
+    </main>
         <div id="footer"></div>
        
-        <script src="js/loadFragments.js"></script>
+        <script src="js/loadFragments.js" type="module" ></script>
+        <script type="module" src="js/checkLogin.js"></script>
         
     </body>
 </html>
