@@ -32,6 +32,12 @@ function showMessage(message, divID, color) {
 const signInButton = document.getElementById('signin-btn');
 signInButton.addEventListener('click', async (event) => {
   event.preventDefault();
+  const loggedInUserId = localStorage.getItem('loggedInUserId');
+  if(loggedInUserId)
+  {
+    showMessage('Login successful!!', 'signInMessage', 'green');
+    window.location.href = 'index.html'; // Redirect after successful login
+  }
   const email = document.getElementById('signin-email').value;
   const password = document.getElementById('signin-password').value;
 
@@ -55,6 +61,7 @@ signInButton.addEventListener('click', async (event) => {
     }
 
     showMessage('Login successful!!', 'signInMessage', 'green');
+    console.log("User logged in");
     window.location.href = 'index.html'; // Redirect after successful login
   } catch (error) {
     const errorCode = error.code;

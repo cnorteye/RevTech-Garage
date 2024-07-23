@@ -14,6 +14,7 @@
   width: auto;
   padding-left: 20px;
   padding-right: 20px;
+  z-index: 20;
 }
 
 #loggedin, #logout {
@@ -119,7 +120,8 @@
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 0.5s ease-in-out;
-    z-index: 2;
+    margin-top: 20px;
+    z-index: 20;
   }
 
   .nav-links.open {

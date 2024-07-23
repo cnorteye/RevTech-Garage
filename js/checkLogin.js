@@ -19,9 +19,15 @@ const auth = getAuth();
 const db = getFirestore();
 
 onAuthStateChanged(auth, (user) => {
-    const loggedInUserFirstName = localStorage.getItem('loggedInUserFirstName');
-    const loggedInUserLastName = localStorage.getItem('loggedInUserLastName');
-    const loggedInUserId = localStorage.getItem('loggedInUserId');
+  if (!user) {
+    localStorage.removeItem("loggedInUserId");
+    localStorage.removeItem("loggedInUserFirstName");
+    localStorage.removeItem("loggedInUserLastName");
+  }
+  console.log('Test successful');
+  const loggedInUserFirstName = localStorage.getItem("loggedInUserFirstName");
+  const loggedInUserLastName = localStorage.getItem("loggedInUserLastName");
+  const loggedInUserId = localStorage.getItem("loggedInUserId");
   if (loggedInUserFirstName) {
     const docRef = doc(db, "users", loggedInUserId);
     getDoc(docRef)
@@ -42,16 +48,16 @@ onAuthStateChanged(auth, (user) => {
 });
 
 function toggleLoginState(loggedIn) {
-    const notLoggedInElements = document.querySelectorAll("#not-loggedin, #signup");
-    const loggedInElements = document.querySelectorAll("#loggedin, #logout");
-    
-    if (loggedIn) {
-        notLoggedInElements.forEach((elem) => (elem.style.display = "none"));
-        loggedInElements.forEach((elem) => (elem.style.display = "flex"));
-    } else {
-        notLoggedInElements.forEach((elem) => (elem.style.display = "block"));
-        loggedInElements.forEach((elem) => (elem.style.display = "none"));
-    }
+  const notLoggedInElements = document.querySelectorAll("#not-loggedin, #signup");
+  const loggedInElements = document.querySelectorAll("#loggedin, #logout");
+
+  if (loggedIn) {
+    notLoggedInElements.forEach((elem) => (elem.style.display = "none"));
+    loggedInElements.forEach((elem) => (elem.style.display = "flex"));
+  } else {
+    notLoggedInElements.forEach((elem) => (elem.style.display = "block"));
+    loggedInElements.forEach((elem) => (elem.style.display = "none"));
+  }
 }
 
 const logoutButton = document.querySelector("#logout");
@@ -60,6 +66,8 @@ if (logoutButton) {
     console.log("Logout clicked");
     event.preventDefault();
     localStorage.removeItem("loggedInUserId");
+    localStorage.removeItem("loggedInUserFirstName");
+    localStorage.removeItem("loggedInUserLastName");
     signOut(auth)
       .then(() => {
         console.log("User signed out");
