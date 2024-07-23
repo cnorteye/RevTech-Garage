@@ -66,14 +66,14 @@
     margin-top: 20px;
     color: #333;
 }
-.review-container{
+.review-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
     padding: 1em;
 }
 
-.review{
+.review {
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: var(--border-radius);
@@ -82,12 +82,25 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.review p{
+.review p {
     font-style: italic;
     color: #555;
 }
 
-.review h4{
+.review h4 {
     margin-top: 10px;
     color: #333;
 } 
+
+/* Special Offers */
+
+.special-header {
+    color: #fff;
+    font-size: 2em;
+}
+
+.special-offers-container {
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+}

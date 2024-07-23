@@ -1,48 +1,91 @@
+:root {
+  --button-background-color: #dc883e;
+  --button-border-color: #dc883e;
+}
+
 /* ABOUT US */
-body{
-  /* background-color: #fff; */
+body {
   color: white;
-}
- .appointment-btn{
-    background-color: var(--button-background-color);
-    border: 2px solid var(--button-border-color);
-    border-radius: var(--border-radius);
-    font-size: 20px;
-    color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    text-decoration: none;
-    
+  font-family: Arial, sans-serif;
 }
 
-.col-sm-8 p{
-    margin-bottom: 40px;
-    font-size: large;
-    text-align: center;
+.container_fluid {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  background-color: #242122; /* Added background color for contrast */
 }
 
-.col-sm-8 button{
-    display: block;
-    margin: 0 auto;
-} */
+.appointment-btn {
+  background-color: var(--button-background-color);
+  border: 2px solid var(--button-border-color);
+  border-radius: 5px;
+  font-size: 20px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
 
-/* Clear floats after the columns */
- .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    align-self: center;
+.col-sm-8 p {
+  margin-bottom: 40px;
+  font-size: large;
+}
+
+.col-sm-8 button {
+  display: block;
+  margin: 0 auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  align-self: center;
+}
+
+#about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.get-to-know {
+  font-size: 36px;
+  margin-bottom: 20px;
+  margin-top: 100px;
+}
+
+.about-image {
+  flex: 1;
+  margin: 10px;
+}
+
+.about-image img {
+  width: 100%; /* Changed to 100% for responsiveness */
+  max-width: 500px; /* Added max-width to prevent it from being too large */
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text {
+  flex: 1;
+  margin: 10px;
+  max-width: 600px;
+}
+
+@media screen and (max-width: 768px) {
+  #about-section {
+    flex-direction: column;
   }
 
-  #about-section{
-    padding: 5em;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  .about-image img {
+    width: 100%;
+    height: auto;
   }
-
-  .get-to-know{
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 20px;
-  } 
+}
