@@ -1,6 +1,7 @@
 /* ABOUT US */
 body{
-  background-color: #fff;
+  /* background-color: #fff; */
+  color: white;
 }
  .appointment-btn{
     background-color: var(--button-background-color);
@@ -17,6 +18,7 @@ body{
 .col-sm-8 p{
     margin-bottom: 40px;
     font-size: large;
+    text-align: center;
 }
 
 .col-sm-8 button{
@@ -29,10 +31,14 @@ body{
     content: "";
     display: table;
     clear: both;
+    align-self: center;
   }
 
-  #about{
+  #about-section{
     padding: 5em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
   }
 
   .get-to-know{
